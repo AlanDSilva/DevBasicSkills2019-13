@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MathTolls</title>
+    <script src="conversions.js"></script>
+    <title>MathTools</title>
 </head>
 <body>
-    <form action="">
+    <form>
+        <span>From:</span>
+        <select name="from">
+                <option value="DEC">DEC</option>
+                <option value="BIN">BIN</option>
+                <option value="OCT">OCT</option>
+                <option value="HEX">HEX</option>
+        </select>
+        <span>To:</span>
+        <select name="to">
+                <option value="DEC">DEC</option>
+                <option value="BIN">BIN</option>
+                <option value="OCT">OCT</option>
+                <option value="HEX">HEX</option>
+        </select>
+        <input type="text" placeholder="Insert number here" name="num">
+        <button type="button" onclick="calculate(from, to, num)">Go!</button>
     </form>
+
+    <p id="result">Result will go here</p>
 </body>
 </html>
