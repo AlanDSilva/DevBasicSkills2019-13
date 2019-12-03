@@ -5,3 +5,6 @@
 
 ## 3/12/2019 - 00:35 - 2 hours of work
     Added Numbering Systems Outputs page with basic functionality working
+
+## 3/12/2019 - 13:40 - 2 hours of work
+    Added Combinatorics page with basic functionality working
