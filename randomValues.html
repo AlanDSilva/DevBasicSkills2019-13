@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"> </script>
+    <title>Random Values</title>
+</head>
+<body>
+    <form>
+
+        <span>Range:</span>
+        <input type="text" name="from" placeholder="from">-
+        <input type="text" name="to" placeholder="to">
+        <br>
+        <span>Number of random samples:</span>
+        <input type="text" name="num" placeholder="number">
+        <button type="button" onclick="showTable(from, to, num)">Get Distribution table</button>
+
+    </form>
+
+    <canvas id="myChart">Result will go here</canvas>
+    <script src="randomValues.js"></script>
+    
+</body>
+</html>
