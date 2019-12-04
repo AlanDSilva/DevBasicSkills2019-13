@@ -2,10 +2,10 @@
 function createTable() {
     var dec = range(1, 50);
     var body = document.body;
-    var table = document.createElement('table');
+    var table = document.createElement("table");
     table.setAttribute("id", "table");
 
-    table.style.wdth = "100%";
+    table.style.width = "100%";
     //table.style.border = "1px solid black";
     for (var i = 1; i <= 50; i++) {
         if (i == 1) {
