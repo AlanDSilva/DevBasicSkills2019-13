@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Random Values</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <form>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-3">
+                    <h1>MATH<strong>Tools</strong></h1>
+                    <p><a href="conversions.html" class="btn btn-outline-primary">Number System Conversions</a></p>
+                    <p><a href="numSysOutputs.html" class="btn btn-outline-primary">Number System Outputs</a></p>
+                    <p><a href="combinatorics.html" class="btn btn-outline-primary">Combinatorics</a></p>
+                    <p><a href="truthTables.html" class="btn btn-outline-primary">Truth Tables</a></p>
+                    <p><a href="randomValues.html" class="btn btn-outline-primary active">Random Values</a></p>
+                    <p><a href="#" class="btn btn-outline-primary">To be done</a></p>
+                </div>
+                <div class="col-9">
+                    <h1>Random Values</h1>
+                    <form>
+                        <span>Range:</span>
+                        <input type="text" name="from" placeholder="from">-
+                        <input type="text" name="to" placeholder="to">
+                        <br>
+                        <span>Number of random samples:</span>
+                        <input type="text" name="num" placeholder="number">
+                        <button type="button" class="btn btn-primary" onclick="showTable(from, to, num)">Get Distribution table</button>
 
-        <span>Range:</span>
-        <input type="text" name="from" placeholder="from">-
-        <input type="text" name="to" placeholder="to">
-        <br>
-        <span>Number of random samples:</span>
-        <input type="text" name="num" placeholder="number">
-        <button type="button" onclick="showTable(from, to, num)">Get Distribution table</button>
+                    </form>
 
-    </form>
+                    <canvas id="myChart">Result will go here</canvas>
+                    <script src="randomValues.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <canvas id="myChart">Result will go here</canvas>
-    <script src="randomValues.js"></script>
-    
+
 </body>
+
 </html>

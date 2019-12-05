@@ -21,6 +21,7 @@ function changeTable(operation) {
     //creates new table
     //alert(results["AND"]);
     var body = document.body;
+    var col9 = document.querySelector(".col-9");
     var table = document.createElement("table");
     table.setAttribute("id", "table");
 
@@ -37,10 +38,8 @@ function changeTable(operation) {
             td.style.border = "1px solid black";
         }
     }
-    body.appendChild(table);
+    col9.appendChild(table);
 }
-
-
 
 
 

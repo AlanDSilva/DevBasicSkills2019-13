@@ -14,3 +14,7 @@
 
 ## 4/12/2019 - 23:35 - 3 hours of work
     Added randomValues page with basic functionality working
+
+## 5/12/2019 - 23:35 - 2 hours of work
+    Added side navigation bar to all pages.
+    Incorporated basic styling of the pages.

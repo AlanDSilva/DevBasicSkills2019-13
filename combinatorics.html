@@ -6,22 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="combinatorics.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
     <title>Combinatorics</title>
 </head>
 
 <body>
-    <form id="form">
-        <span>Operation:</span>
-        <select name="operation" onchange="toggler(operation)">
-            <option value="Permutation">Permutation</option>
-            <option value="Combination">Combination</option>
-        </select>
-        <span id="replacement"><input id="replacement_button" type="checkbox">replacement</span>
-        <input type="text" name="n" placeholder="n-value">
-        <input type="text" name="r" placeholder="r-value">
-        <button type="button" onclick="calculate(operation, n, r)">Calculate</button>
-    </form>
-    <p id="result">Result will go here</p>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-3">
+                        <h1>MATH<strong>Tools</strong></h1>
+                        <p><a href="conversions.html" class="btn btn-outline-primary">Number System Conversions</a></p>
+                        <p><a href="numSysOutputs.html" class="btn btn-outline-primary">Number System Outputs</a></p>
+                        <p><a href="combinatorics.html" class="btn btn-outline-primary active">Combinatorics</a></p>
+                        <p><a href="truthTables.html" class="btn btn-outline-primary">Truth Tables</a></p>
+                        <p><a href="randomValues.html" class="btn btn-outline-primary">Random Values</a></p>
+                        <p><a href="#" class="btn btn-outline-primary">To be done</a></p>
+                </div>
+                <div class="col-9">
+                    <h1>Combinatorics</h1>
+                    <form id="form">
+                        <span>Operation:</span>
+                        <select name="operation" onchange="toggler(operation)">
+                            <option value="Permutation">Permutation</option>
+                            <option value="Combination">Combination</option>
+                        </select>
+                        <span id="replacement"><input id="replacement_button" type="checkbox">replacement</span>
+                        <input type="text" name="n" placeholder="n-value">
+                        <input type="text" name="r" placeholder="r-value">
+                        <button type="button" class="btn btn-primary" onclick="calculate(operation, n, r)">Calculate</button>
+                    </form>
+                    <p id="result">Result will go here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 </body>
 

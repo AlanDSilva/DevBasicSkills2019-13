@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="numSysOutputs.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <button onclick="createTable()">Show Table</button>
-    <button onclick="deleteTable()">Delete Table</button>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-3">
+                    <h1>MATH<strong>Tools</strong></h1>
+                    <p><a href="conversions.html" class="btn btn-outline-primary">Number System Conversions</a></p>
+                    <p><a href="numSysOutputs.html" class="btn btn-outline-primary active">Number System Outputs</a></p>
+                    <p><a href="combinatorics.html" class="btn btn-outline-primary">Combinatorics</a></p>
+                    <p><a href="truthTables.html" class="btn btn-outline-primary">Truth Tables</a></p>
+                    <p><a href="randomValues.html" class="btn btn-outline-primary">Random Values</a></p>
+                    <p><a href="#" class="btn btn-outline-primary">To be done</a></p>
+                </div>
+                <div class="col-9">
+                    <h1>Number System</h1>
+                    <button onclick="createTable()" class="btn btn-primary">Show Table</button>
+                    <button onclick="deleteTable()" class="btn btn-primary">Delete Table</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

@@ -2,6 +2,7 @@
 function createTable() {
     var dec = range(1, 50);
     var body = document.body;
+    var col9 = document.querySelector(".col-9");
     var table = document.createElement("table");
     table.setAttribute("id", "table");
 
@@ -41,7 +42,7 @@ function createTable() {
 
     }
 
-    body.appendChild(table);
+    col9.appendChild(table);
 
 }
 

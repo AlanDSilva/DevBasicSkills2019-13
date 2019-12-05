@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
     <script src="conversions.js"></script>
     <title>MathTools</title>
 </head>
-<body>
-    <form>
-        <span>From:</span>
-        <select name="from">
-                <option value="DEC">DEC</option>
-                <option value="BIN">BIN</option>
-                <option value="OCT">OCT</option>
-                <option value="HEX">HEX</option>
-        </select>
-        <span>To:</span>
-        <select name="to">
-                <option value="DEC">DEC</option>
-                <option value="BIN">BIN</option>
-                <option value="OCT">OCT</option>
-                <option value="HEX">HEX</option>
-        </select>
-        <input type="text" placeholder="Insert number here" name="num">
-        <button type="button" onclick="calculate(from, to, num)">Go!</button>
-    </form>
 
-    <p id="result">Result will go here</p>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-3">
+                    <h1>MATH<strong>Tools</strong></h1>
+                    <p><a href="conversions.html" class="btn btn-outline-primary active">Number System Conversions</a></p>
+                    <p><a href="numSysOutputs.html" class="btn btn-outline-primary">Number System Outputs</a></p>
+                    <p><a href="combinatorics.html" class="btn btn-outline-primary">Combinatorics</a></p>
+                    <p><a href="truthTables.html" class="btn btn-outline-primary">Truth Tables</a></p>
+                    <p><a href="randomValues.html" class="btn btn-outline-primary">Random Values</a></p>
+                    <p><a href="#" class="btn btn-outline-primary">To be done</a></p>
+                </div>
+                <div class="col-9">
+                    <h1>Conversions</h1>
+                    <form>
+                        <span>From:</span>
+                        <select name="from">
+                            <option value="DEC">DEC</option>
+                            <option value="BIN">BIN</option>
+                            <option value="OCT">OCT</option>
+                            <option value="HEX">HEX</option>
+                        </select>
+                        <span>To:</span>
+                        <select name="to">
+                            <option value="DEC">DEC</option>
+                            <option value="BIN">BIN</option>
+                            <option value="OCT">OCT</option>
+                            <option value="HEX">HEX</option>
+                        </select>
+                        <input type="text" placeholder="Insert number here" name="num">
+                        <button type="button" class="btn btn-primary" onclick="calculate(from, to, num)">Go!</button>
+                    </form>
+
+                    <p id="result">Result will go here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

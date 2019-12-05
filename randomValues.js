@@ -21,15 +21,16 @@ function showTable(from, to, num) {
 
     
     // Delete existing canvas
-    var body = document.body;
     var canvas = document.getElementById("myChart");
     canvas.remove();
     console.log("canvas removed");
 
     // Recreate canvas
+    var body = document.body;
+    var col9 = document.querySelector(".col-9");
     canvas = document.createElement("canvas");
     canvas.setAttribute("id", "myChart");
-    body.appendChild(canvas);
+    col9.appendChild(canvas);
     console.log("new canvas created");
 
     // Add chart to canvas
