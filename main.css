@@ -9,3 +9,7 @@ a {
 .center{
     text-align: center;
 }
+
+.error-message{
+    margin-bottom:15px;
+}

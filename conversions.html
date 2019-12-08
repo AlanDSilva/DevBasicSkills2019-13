@@ -15,6 +15,9 @@
 <body>
     <div class="container">
         <div class="jumbotron">
+            <div class="error-message">
+
+            </div>
             <div class="row">
                 <div class="col-3">
                     <h1>MATH<strong>Tools</strong></h1>
@@ -30,7 +33,7 @@
                     <h1>Conversions</h1>
                     <form>
                         <div class="form-group row">
-                            <div class="col">
+                            <div class="col-5">
                                 <span>From:</span>
                                 <select name="from" class="form-control">
                                     <option value="DEC">Decimal</option>
@@ -39,7 +42,11 @@
                                     <option value="HEX">Hexadecimal</option>
                                 </select>
                             </div>
-                            <div class="col">
+                            <div class="col-2">
+                                <br>
+                                <button type="button" class="form-control" onclick="swap(from, to)">⇌</button>
+                            </div>
+                            <div class="col-5">
                                 <span>To:</span>
                                 <select name="to" class="form-control">
                                     <option value="DEC">Decimal</option>

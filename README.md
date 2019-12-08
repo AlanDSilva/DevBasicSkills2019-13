@@ -20,4 +20,8 @@
     Incorporated basic styling of the pages.
 
 ## 8/12/2019 - 18:50 - 1 hour of work
-    Continued working with styling the oages
+    Continued working with styling the pages
+
+## 9/12/2019 - 01:02 - 2 hours of work
+    Added error handling and flash alerts.
+    Added swap button to Number System Conversions page.
