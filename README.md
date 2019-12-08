@@ -18,3 +18,6 @@
 ## 5/12/2019 - 23:35 - 2 hours of work
     Added side navigation bar to all pages.
     Incorporated basic styling of the pages.
+
+## 8/12/2019 - 18:50 - 1 hour of work
+    Continued working with styling the oages

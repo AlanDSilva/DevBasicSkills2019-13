@@ -18,7 +18,8 @@
             <div class="row">
                 <div class="col-3">
                     <h1>MATH<strong>Tools</strong></h1>
-                    <p><a href="conversions.html" class="btn btn-outline-primary active">Number System Conversions</a></p>
+                    <p><a href="conversions.html" class="btn btn-outline-primary active">Number System Conversions</a>
+                    </p>
                     <p><a href="numSysOutputs.html" class="btn btn-outline-primary">Number System Outputs</a></p>
                     <p><a href="combinatorics.html" class="btn btn-outline-primary">Combinatorics</a></p>
                     <p><a href="truthTables.html" class="btn btn-outline-primary">Truth Tables</a></p>
@@ -28,24 +29,35 @@
                 <div class="col-9">
                     <h1>Conversions</h1>
                     <form>
-                        <span>From:</span>
-                        <select name="from">
-                            <option value="DEC">DEC</option>
-                            <option value="BIN">BIN</option>
-                            <option value="OCT">OCT</option>
-                            <option value="HEX">HEX</option>
-                        </select>
-                        <span>To:</span>
-                        <select name="to">
-                            <option value="DEC">DEC</option>
-                            <option value="BIN">BIN</option>
-                            <option value="OCT">OCT</option>
-                            <option value="HEX">HEX</option>
-                        </select>
-                        <input type="text" placeholder="Insert number here" name="num">
-                        <button type="button" class="btn btn-primary" onclick="calculate(from, to, num)">Go!</button>
-                    </form>
+                        <div class="form-group row">
+                            <div class="col">
+                                <span>From:</span>
+                                <select name="from" class="form-control">
+                                    <option value="DEC">Decimal</option>
+                                    <option value="BIN">Binary</option>
+                                    <option value="OCT">Octal</option>
+                                    <option value="HEX">Hexadecimal</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <span>To:</span>
+                                <select name="to" class="form-control">
+                                    <option value="DEC">Decimal</option>
+                                    <option value="BIN">Binary</option>
+                                    <option value="OCT">Octal</option>
+                                    <option value="HEX">Hexadecimal</option>
+                                </select>
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <span>Enter Number</span>
+                            <input class="form-control" type="text" placeholder="Insert number here" name="num">
+                        </div>
+                        <button type="button" class="btn btn-primary"
+                            onclick="calculate(from, to, num)">Convert</button>
+                    </form>
+                    <hr>
                     <p id="result">Result will go here</p>
                 </div>
             </div>

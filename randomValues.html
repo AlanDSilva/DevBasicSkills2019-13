@@ -28,15 +28,27 @@
                 <div class="col-9">
                     <h1>Random Values</h1>
                     <form>
-                        <span>Range:</span>
-                        <input type="text" name="from" placeholder="from">-
-                        <input type="text" name="to" placeholder="to">
-                        <br>
-                        <span>Number of random samples:</span>
-                        <input type="text" name="num" placeholder="number">
-                        <button type="button" class="btn btn-primary" onclick="showTable(from, to, num)">Get Distribution table</button>
+                        <div class="form-group row">
+                            <div class="col">
+                                <span>From:</span>
+                                <input class="form-control" type="text" name="from" placeholder="Enter Number Here">
+                            </div>
+                            <div class="col">
+                                <span>From:</span>
+                                <input class="form-control" type="text" name="to" placeholder="Enter Number Here">
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <span>Number of random samples:</span>
+                            <input class="form-control" type="text" name="num" placeholder="Enter Number Here">
+                        </div>
+
+                        <button type="button" class="btn btn-primary" onclick="showTable(from, to, num)">Get
+                            Distribution table</button>
                     </form>
+
+                    <hr>
 
                     <canvas id="myChart">Result will go here</canvas>
                     <script src="randomValues.js"></script>

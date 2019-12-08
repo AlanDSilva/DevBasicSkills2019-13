@@ -28,18 +28,20 @@
                 <div class="col-9">
                     <h1>Truth Tables</h1>
                     <form>
-                        <span>Choose truth table:</span>
-                        <select name="operation" onchange="changeTable(operation)">
-                            <option value="">...</option>
-                            <option value="AND">AND</option>
-                            <option value="OR">OR</option>
-                            <option value="NAND">NAND</option>
-                            <option value="NOR">NOR</option>
-                            <option value="XOR">XOR</option>
-                            <option value="XNOR">XNOR</option>
-                        </select>
-
+                        <div class="form-group">
+                            <span>Choose truth table:</span>
+                            <select class="form-control" name="operation" onchange="changeTable(operation)">
+                                <option value="">...</option>
+                                <option value="AND">AND</option>
+                                <option value="OR">OR</option>
+                                <option value="NAND">NAND</option>
+                                <option value="NOR">NOR</option>
+                                <option value="XOR">XOR</option>
+                                <option value="XNOR">XNOR</option>
+                            </select>
+                        </div>
                     </form>
+                    <hr>
                 </div>
             </div>
         </div>
