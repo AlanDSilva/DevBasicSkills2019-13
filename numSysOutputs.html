@@ -1,3 +1,5 @@
+<!-- BEHAVIOUR OF TABLE CREATION NEEDS TO CHANGE-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +10,7 @@
     <script src="numSysOutputs.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Number System Outputs</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -23,13 +25,11 @@
                     <p><a href="combinatorics.html" class="btn btn-outline-primary">Combinatorics</a></p>
                     <p><a href="truthTables.html" class="btn btn-outline-primary">Truth Tables</a></p>
                     <p><a href="randomValues.html" class="btn btn-outline-primary">Random Values</a></p>
-                    <p><a href="#" class="btn btn-outline-primary">To be done</a></p>
                 </div>
                 <div class="col-9">
                     <h1>Number System</h1>
                     <div class="center">
-                        <button onclick="createTable()" class="btn btn-primary">Show Table</button>
-                        <button onclick="deleteTable()" class="btn btn-danger">Delete Table</button>
+                        <button id="button" onclick="toggleTable()" class="btn btn-primary">Show Table</button>
                     </div>
 
 

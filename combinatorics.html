@@ -15,9 +15,6 @@
 <body>
     <div class="container">
         <div class="jumbotron">
-            <div class="error-message">
-                <!-- Error flash message goes here -->
-            </div>
             <div class="row">
                 <div class="col-3">
                     <h1>MATH<strong>Tools</strong></h1>
@@ -26,11 +23,10 @@
                     <p><a href="combinatorics.html" class="btn btn-outline-primary active">Combinatorics</a></p>
                     <p><a href="truthTables.html" class="btn btn-outline-primary">Truth Tables</a></p>
                     <p><a href="randomValues.html" class="btn btn-outline-primary">Random Values</a></p>
-                    <p><a href="#" class="btn btn-outline-primary">To be done</a></p>
                 </div>
                 <div class="col-9">
                     <h1>Combinatorics</h1>
-                    <form id="form">
+                    <form id="form" onsubmit="return false">
                         <div class="form-group">
                             <span>Operation:</span>
                             <select class="form-control" name="operation" onchange="toggler(operation)">
@@ -40,23 +36,25 @@
                             <span id="replacement"><input id="replacement_button" type="checkbox">replacement</span>
                         </div>
 
+                        <!-- PATTERN MAYBE?-->
                         <div class="form-group row">
                             <div class="col">
                                 <span>n-Value:</span>
-                                <input class="form-control" type="text" name="n" placeholder="Enter Number Here">
+                                <input class="form-control" required pattern='[0-9]+$' title="Natural numbers [0-9]" type="text" name="n" placeholder="Enter Number Here">
                             </div>
                             <div class="col">
                                 <span>r-Value:</span>
-                                <input class="form-control" type="text" name="r" placeholder="Enter Number Here">
+                                <input class="form-control" id="r" required pattern='[0-9]+$' title="Natural numbers [0-9]" type="text" name="r" placeholder="Enter Number Here">
                             </div>
                         </div>
 
-                        <button type="button" class="btn btn-primary"
+                        <button type="submit" class="btn btn-primary"
                             onclick="calculate(operation, n, r)">Calculate</button>
 
                     </form>
                     <hr>
-                    <p id="result">Result will go here</p>
+                    <span>Result:</span>
+                    <p class="form-control" id="result"></p>
                 </div>
             </div>
         </div>

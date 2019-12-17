@@ -9,15 +9,12 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <script src="conversions.js"></script>
-    <title>MathTools</title>
+    <title>Conversions</title>
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron">
-            <div class="error-message">
-
-            </div>
             <div class="row">
                 <div class="col-3">
                     <h1>MATH<strong>Tools</strong></h1>
@@ -27,15 +24,14 @@
                     <p><a href="combinatorics.html" class="btn btn-outline-primary">Combinatorics</a></p>
                     <p><a href="truthTables.html" class="btn btn-outline-primary">Truth Tables</a></p>
                     <p><a href="randomValues.html" class="btn btn-outline-primary">Random Values</a></p>
-                    <p><a href="#" class="btn btn-outline-primary">To be done</a></p>
                 </div>
                 <div class="col-9">
                     <h1>Conversions</h1>
-                    <form>
+                    <form onsubmit="return false">
                         <div class="form-group row">
                             <div class="col-5">
                                 <span>From:</span>
-                                <select name="from" class="form-control">
+                                <select name="from" class="form-control" onchange="changePattern(from)">
                                     <option value="DEC">Decimal</option>
                                     <option value="BIN">Binary</option>
                                     <option value="OCT">Octal</option>
@@ -50,22 +46,33 @@
                                 <span>To:</span>
                                 <select name="to" class="form-control">
                                     <option value="DEC">Decimal</option>
-                                    <option value="BIN">Binary</option>
+                                    <option value="BIN" selected>Binary</option>
                                     <option value="OCT">Octal</option>
                                     <option value="HEX">Hexadecimal</option>
                                 </select>
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            <span>Enter Number</span>
-                            <input class="form-control" type="text" placeholder="Insert number here" name="num">
+                        <div class="form-group row">
+                            <div class="col-5">
+                                <span>Enter Number:</span>
+                                <input class="form-control" required pattern='[0-9]+$' title="Decimal number: [0-9]" id="input" type="text" name="num">
+                            </div>
+                            <div class="col-2">
+                                <br>
+                                <p class="v1">=</p>
+                            </div>
+                            <div class="col-5">
+                                <span>Result:</span>
+                                <p id="result" class="form-control"></p>
+                            </div>
+
                         </div>
-                        <button type="button" class="btn btn-primary"
+                        <button type="submit" class="btn btn-primary"
                             onclick="calculate(from, to, num)">Convert</button>
+                        
                     </form>
-                    <hr>
-                    <p id="result">Result will go here</p>
+                    
                 </div>
             </div>
         </div>

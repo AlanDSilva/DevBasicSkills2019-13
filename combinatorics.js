@@ -5,28 +5,17 @@ function toggler(operation) {
 
 function calculate(operation, n, r) {
 
-    // delete alert message if it exists
-    if (document.querySelector(".alert")) {
-        document.querySelector(".alert").remove();
-    }
 
+    var n_int = Number(n.value);
+    var r_int = Number(r.value);
+    var result = 0;
+    var text = document.getElementById("result");
+    var r_validation = document.querySelector("#r");
 
-    base = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    // check if numbers are valid
-    // case one or both numbers is/are invalid
-    if (!(isValid(n.value, base) && isValid(r.value, base))) {
-        var err = document.querySelector(".error-message");
-        var div = document.createElement("div");
-        div.setAttribute("class", "alert alert-danger");
-        div.innerHTML = "Invalid Input! Only natural numbers are allowed (0-9)";
-        err.appendChild(div);
-    } else {
-        n_int = Number(n.value);
-        r_int = Number(r.value);
-        var result = 0;
-
-        var text = document.getElementById("result");
-
+    if (r_int <= n_int) {
+        
+        r_validation.setCustomValidity("");
+        
         // calculate permutation
         if (operation.value == "Permutation") {
             if (document.getElementById("replacement_button").checked) {
@@ -40,9 +29,10 @@ function calculate(operation, n, r) {
         }
 
         text.innerHTML = result;
+    } else{
+        text.innerHTML = "";
+        r_validation.setCustomValidity("Must be a Natural number [0-9] smaller than n-Value");
     }
-
-
 
 }
 
@@ -56,16 +46,3 @@ function integral(num) {
     }
 }
 
-
-// checks if number is valid
-function isValid(num, base) {
-    if (num == "") {
-        return false;
-    }
-    for (var i of num) {
-        if (base.indexOf(i) == -1) {
-            return false;
-        }
-    }
-    return true;
-}
